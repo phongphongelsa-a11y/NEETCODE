@@ -33,18 +33,18 @@ const prompt = promptSync();
 
 
 
-function inputArray(n: number): number[] {
+function input_Array(n: number): number[] {
     const input = prompt(`Nhap ${n} phan tu: `);
     const arr = input.split(" ").map(Number);
     return arr;
 }
 
-function printArray(arr:number[]): void {
+function print_Array(arr:number[]): void {
     console.log(arr.join(" "));
 }
 
 
-function linearSearch(arr:number[],  x: number) : boolean {
+function linear_Search(arr:number[],  x: number) : boolean {
     let found = false;
     for (let i = 0;i<arr.length;i++) {
         if (arr[i]==x) {
@@ -56,7 +56,7 @@ function linearSearch(arr:number[],  x: number) : boolean {
 }
 
 
-function TimChan(arr:number[]) : boolean {
+function Tim_Chan(arr:number[]) : boolean {
     let found: boolean = false;
     for (let i = 0;i<arr.length;i++) {
         if (arr[i]%2===0) {
@@ -80,7 +80,7 @@ return (sorted ? true : false);
 }
 
 
-function SearchDuplicate(arr:number[], brr:number[]) : boolean {
+function Search_Duplicate(arr:number[], brr:number[]) : boolean {
 let duplicate : boolean = false;
 for (let i = 0;i<arr.length;i++) {
     for (let j = 0;j<brr.length;j++) {
@@ -95,7 +95,7 @@ return (duplicate ? true : false);
 }
 
 // Remove Duplicate flag
-function removeDuplicate (arr:number[]) : number[] {
+function remove_Duplicate (arr:number[]) : number[] {
     const result : number[] = [];
     for (let i = 0;i<arr.length;i++) {
         let isDuplicate: boolean = false;
@@ -113,7 +113,7 @@ function removeDuplicate (arr:number[]) : number[] {
 }
 
 // Remove Duplicate visited
-function removeDuplicateVisited(arr:number[]) : number[] {
+function remove_Duplicate_Visited(arr:number[]) : number[] {
     const visited: boolean[] = new Array(arr.length).fill(false);
     const result: number [] = [];
     for (let i = 0;i<arr.length;i++) {

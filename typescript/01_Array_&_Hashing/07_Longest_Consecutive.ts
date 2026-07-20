@@ -1,7 +1,7 @@
 // ======================== Longest Consecutive Sequence  ===============================
 
 
-function longestConsecutive(nums:number[]) : number {
+function longest_Consecutive(nums:number[]) : number {
 /**
     * @problem: Longest Consecutive Sequence | https://neetcode.io/problems/valid-sudoku/question?list=neetcode150 ]
     * @Solution:  Longest Consecutive Sequence Bructe Force

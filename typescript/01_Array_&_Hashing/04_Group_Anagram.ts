@@ -2,7 +2,7 @@
 
 
 
-function isAnagramWithMap(s: string, t:string) : boolean {
+function is_Anagram_With_Map(s: string, t:string) : boolean {
 /**
     * @problem: [Vail Anagram | https://neetcode.io/problems/is-anagram/question?list=neetcode150 ]
     * @Solution: Hash Map
@@ -30,7 +30,7 @@ function isAnagramWithMap(s: string, t:string) : boolean {
     return true;    
 }
 
-function groupAnagram(strs: string[]) : string[][] {
+function group_Anagram(strs: string[]) : string[][] {
 /**
     * @problem: [GroupAnagram | https://neetcode.io/problems/anagram-groups/question?list=neetcode150 ]
     * @Solution: Brute Force
@@ -50,7 +50,7 @@ function groupAnagram(strs: string[]) : string[][] {
         let resultEl: string[] = [];
         resultEl.push(strs[i]);
         for (let j = i+1;j<strs.length;j++) {
-            if (isAnagramWithMap(strs[i],strs[j])) {
+            if (is_Anagram_With_Map(strs[i],strs[j])) {
                 resultEl.push(strs[j]);
                 strs[j] = "#";
             }
@@ -60,7 +60,7 @@ function groupAnagram(strs: string[]) : string[][] {
     return result;
 } 
 
-function groupAngramWithHashMap(strs:string[]) : string[][] {
+function group_Angram_With_HashMap(strs:string[]) : string[][] {
 /**
     * @problem: [GroupAnagram | https://neetcode.io/problems/anagram-groups/question?list=neetcode150 ]
     * @Solution: Hash Map + Sort
@@ -104,7 +104,7 @@ function getKey (str: string): string {
     }
     return result;    
 }
-function groupAnagramWithAz(strs:string[]) : string[][] {
+function group_Anagram_With_Az(strs:string[]) : string[][] {
 /**
     * @problem: [GroupAnagram | https://neetcode.io/problems/anagram-groups/question?list=neetcode150 ]
     * @Solution: Hash Map
@@ -129,7 +129,7 @@ function groupAnagramWithAz(strs:string[]) : string[][] {
 }
 
 
-function groupAnagrams(strs:string[]): string[][] {
+function group_Anagrams(strs:string[]): string[][] {
 /**
     * @problem: [GroupAnagram | https://neetcode.io/problems/anagram-groups/question?list=neetcode150 ]
     * @Solution: Hash Map + Array Count Frequent

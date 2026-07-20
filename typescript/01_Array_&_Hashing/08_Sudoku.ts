@@ -1,6 +1,6 @@
 // ======================== Sudoku  ===============================
 
-function isValidSudoku(board:string[]) : boolean {
+function is_Valid_Sudoku(board:string[]) : boolean {
 /**
     * @problem: [Valid Sudoku] | https://neetcode.io/problems/valid-sudoku/question?list=neetcode150 ]
     * @Solution:  Vaild Sudoku

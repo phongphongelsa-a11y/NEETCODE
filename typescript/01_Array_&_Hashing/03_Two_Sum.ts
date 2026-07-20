@@ -1,6 +1,6 @@
 // ======================= Two Sum =====================================
 
-function twoSum(arr:number[], target:number) {
+function two_Sum(arr:number[], target:number) {
 /**
     * @problem: [Two Sum | https://neetcode.io/problems/two-integer-sum/question]
     * @Solution: Brute Force
@@ -22,7 +22,7 @@ function twoSum(arr:number[], target:number) {
 
 
 
-function twoSumWithDataStruct(arr:number[], target:number) {
+function two_Sum_With_Data_Struct(arr:number[], target:number) {
 /**
     * @problem: [Two Sum | https://neetcode.io/problems/two-integer-sum/question]
     * @Solution: Hash Map

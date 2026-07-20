@@ -1,6 +1,6 @@
 // ======================= Vaid Anagram ===============================
 
-function isAnagram(s: string, t: string) : boolean {
+function is_Anagram(s: string, t: string) : boolean {
 /**
     * @problem: [Vail Anagram | https://neetcode.io/problems/is-anagram/question?list=neetcode150 ]
     * @Solution: Brute Force
@@ -29,7 +29,7 @@ function isAnagram(s: string, t: string) : boolean {
 
 
 
-function isAnagramWithSort(s:string, t:string) : boolean {
+function is_Anagram_With_Sort(s:string, t:string) : boolean {
 /**
     * @problem: [Vail Anagram | https://neetcode.io/problems/is-anagram/question?list=neetcode150 ]
     * @Solution: Sort
@@ -50,7 +50,7 @@ function isAnagramWithSort(s:string, t:string) : boolean {
 
 
 
-function isAnagramWithCount(s:string, t:string) : boolean {
+function is_Anagram_With_Count(s:string, t:string) : boolean {
 /**
     * @problem: [Vail Anagram | https://neetcode.io/problems/is-anagram/question?list=neetcode150 ]
     * @Solution: Hash Map
@@ -78,7 +78,7 @@ function isAnagramWithCount(s:string, t:string) : boolean {
 
 
 
-function isAnagramWithMap(s: string, t:string) : boolean {
+function is_Anagram_With_Map(s: string, t:string) : boolean {
 /**
     * @problem: [Vail Anagram | https://neetcode.io/problems/is-anagram/question?list=neetcode150 ]
     * @Solution: Hash Map

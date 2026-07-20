@@ -1,6 +1,6 @@
 // ======================== Top K  ===============================
 
-function BrutceForceTopK(arr:number[],k:number) {
+function Brutce_Force_Top_K(arr:number[],k:number) {
 /**
     * @problem: [Top K Frequent Element | https://neetcode.io/problems/top-k-elements-in-list/question?list=neetcode150 ]
     * @Solution: Bructe Force Top K
@@ -50,7 +50,7 @@ function BrutceForceTopK(arr:number[],k:number) {
     return result;    
 }
 
-function HashMapTopK(arr:number[],k:number) {
+function HashMap_Top_K(arr:number[],k:number) {
 /**
     * @problem: [Top K Frequent Element | https://neetcode.io/problems/top-k-elements-in-list/question?list=neetcode150 ]
     * @Solution: Hash Map
@@ -78,7 +78,7 @@ function HashMapTopK(arr:number[],k:number) {
     return array.slice(0,k).map(pair=>pair[0]);
 }
 
-function HashMapBucketSortTopK(arr:number[],k:number) {
+function HashMap_Bucket_Sort_Top_K(arr:number[],k:number) {
 /**
     * @problem: [Top K Frequent Element | https://neetcode.io/problems/top-k-elements-in-list/question?list=neetcode150 ]
     * @Solution: Bucket Sort
