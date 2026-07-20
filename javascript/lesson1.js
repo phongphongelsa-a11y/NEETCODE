@@ -5,7 +5,6 @@
 const { setMaxIdleHTTPParsers } = require('node:http');
 
 
-
 // let a = Number(prompt('Nhap a: '));
 // let b = Number(prompt('Nhap b: '));
 
@@ -299,35 +298,35 @@ const { setMaxIdleHTTPParsers } = require('node:http');
 // - Đã có 2 array đại diện cho unique nums và frequent nums
 // - Tiếp theo tìm max nhiều lần để lấy ra top k elements
 
-function isAnagram(s,t) {
-    if (s.length!=t.length) return false;
-    const countT = new Map();
-    const countS = new Map();
-    for (let i = 0;i<n;i++) {
-        countT.set(t[i],(countT.get(s[i])??0)+1);
-        countS.set(s[i],(countS).get(s[i]??0)+1);
-    }
-    for (const [key,value] of countS) {
-        if (countT.get(key)!=value) {
-            return false;
-        }
-    }
-    return true;
-}
+// function isAnagram(s,t) {
+//     if (s.length!=t.length) return false;
+//     const countT = new Map();
+//     const countS = new Map();
+//     for (let i = 0;i<n;i++) {
+//         countT.set(t[i],(countT.get(s[i])??0)+1);
+//         countS.set(s[i],(countS).get(s[i]??0)+1);
+//     }
+//     for (const [key,value] of countS) {
+//         if (countT.get(key)!=value) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
 
-// solution 1
-    function groupAnagrams(strs) {
-        const res = new Map();
+// // solution 1
+//     function groupAnagrams(strs) {
+//         const res = new Map();
         
-        for (let s of strs) {
-            const sortedS = s.split('').sort().join('');
-            if (!res.has(sortedS)) {
-                res.set(sortedS, []);
-            }
-            res.get(sortedS).push(s);
-        }
-        return Array.from(res.values());
-    }
+//         for (let s of strs) {
+//             const sortedS = s.split('').sort().join('');
+//             if (!res.has(sortedS)) {
+//                 res.set(sortedS, []);
+//             }
+//             res.get(sortedS).push(s);
+//         }
+//         return Array.from(res.values());
+//     }
 
 // solution 2
 // function groupAnagrams(strs) {
@@ -388,3 +387,29 @@ console.log(groupAnagrams(string));
     
 
 
+function longestConsecutive(nums) {
+        if (nums.length == 0) return 0;
+        if (nums.length == 1) return 1;
+        let maxLength = 0;
+        for (const num of nums) {
+            let current = num;
+            let currentLength = 1;
+            while (Contain(nums, current+1)) {
+                current++;
+                currentLength++;
+            }
+            maxLength = Math.max(maxLength,currentLength)
+        } 
+        return maxLength;
+    }
+function Contain(nums, target ) {
+    for (const num of nums) {
+        if (num==target) {
+            return true;
+        }
+    }
+    return false;
+}
+
+let arr = [2,20,4,10,3,4,5];
+longestConsecutive(arr);
