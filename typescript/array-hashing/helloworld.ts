@@ -724,6 +724,8 @@ function Contain(nums:number[], target:number ) :boolean {
     return false;
 }
 
+
+
 const n = [9,1,4,7,3,-1,0,5,8,-1,6];
 console.log(longestConsecutive(n));
 
