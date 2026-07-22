@@ -62,5 +62,5 @@ function Duplicate_With_Data_Struct (arr:number[]) : boolean {
     }
     return false;
 }
-const array:number[] = [1,2,3,4,5];
+const array:number[] = [1,2,3,4,5,3,4];
 console.log(Duplicate_With_Data_Struct(array));
