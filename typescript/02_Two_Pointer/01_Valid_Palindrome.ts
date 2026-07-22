@@ -1,3 +1,5 @@
+
+// ======================== Vaild_Palindrome  ===============================
 function alphaNum(c:string) : boolean {
     return (
         (c >= 'A' && c <= 'Z') || 
