@@ -5,7 +5,8 @@ function Remove_Element(nums:number[], value:number) : number {
     * @problem: [ Remove Element | https://leetcode.com/problems/remove-element/?envType=problem-list-v2&envId=two-pointers ]
     * @Solution: Two Pointer
     * @Idea: 
-    *   Đặt i ở đầu và j ở cuối, i  
+    *   Pattern: i và j ở 2 đầu chạy vào
+    *   Nếu i !== value thì tăng i để tìm phần tử
     * @Complexcity: 
     * - Time: o(n)
     * - Space: o(1) 
