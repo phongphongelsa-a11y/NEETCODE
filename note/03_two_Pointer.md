@@ -9,10 +9,11 @@
 - 2 con trỏ đối xứng (từ 2 đầu vào giữa).
 - 2 con trỏ cùng chiều (slow and fast).
 - Sliding window
+- 2 con trỏ chạy trên 2 data khác nhau
 ## Độ phức tạp
-- Thường giúp giảm từ O(n^2) xuống O(n) tùy bài toán vì làm in-place (xét về space complexcity)
+- Giúp giảm Space Complexcity và Time Complexcity vì làm in-place (xét về space complexcity)
 ## Ứng dụng 
-- Các bài toán có thể lợi dụng được tính chất bài toán như Two Sum Input Sorted Array
+- Lợi dụng tính chất bài toán như Two Sum Input Sorted Array
 - Các bài kiểm tra đối xứng.
 - VD: Bài toán Two Sum Input Sorted Array (quyết định move con trỏ nào dựa trên so sánh với target)
   + Nếu đã sắp xếp, t hấy tính chất là
