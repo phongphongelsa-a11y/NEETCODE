@@ -28,6 +28,10 @@ function Remove_Element(nums:number[], value:number) : number {
 }
 
 function Remove_Element_Fast_Slow(nums:number[], value: number) :number {
+    // i: người kiểm tra hàng hóa
+    // index: xếp hàng lên kệ
+    // nếu nums[i] == val --> đi tiếp --> index giữ nguyên ko tăng
+    // nếu nums[i] !== val --> xếp vào chỗ index
     let index = 0;
     for (let i =0;i<nums.length;i++) {
         if (nums[i]!==value) {
