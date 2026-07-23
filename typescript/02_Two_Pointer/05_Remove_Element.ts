@@ -15,7 +15,7 @@ function Remove_Element(nums:number[], value:number) : number {
     let j = nums.length -1;
     while (i<=j) {
         if (nums[i] !== value) {
-            i++
+            i++;
         }
         else {
             let temp = nums[i];
@@ -25,7 +25,17 @@ function Remove_Element(nums:number[], value:number) : number {
         }
     }
     return i;
+}
 
+function Remove_Element_Fast_Slow(nums:number[], value: number) :number {
+    let index = 0;
+    for (let i =0;i<nums.length;i++) {
+        if (nums[i]!==value) {
+            nums[index] = nums[i];
+            index++;
+        }
+    }
+    return index;
 }
 let array:number[] = [1];
 let value = 1;
