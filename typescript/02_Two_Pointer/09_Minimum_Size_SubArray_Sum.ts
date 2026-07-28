@@ -1,6 +1,5 @@
 
-let array = [2,3,1,2,4,3];
-let target = 7;
+
 
 function printArray(nums:number[]): void {
     for (let i = 0;i<nums.length;i++) {
@@ -75,4 +74,25 @@ function subArrayMin(nums:number[], target: number) {
     }
 }
 
-console.log(subArrayMin(array,target));
+
+function subArrayMin_Sliding_Window(nums:number[], target: number) {
+    if (nums.length === 0) return 0;
+    let left = 0,
+        sum = 0,
+        min_Length = +Infinity;
+    for (let right = 0; right < nums.length; right++) {
+        sum+=nums[right];
+        while (sum >= target) {
+            min_Length = Math.min(min_Length, right - left + 1);
+            sum-=nums[left];
+            left++;
+        }
+    }
+    return min_Length === +Infinity ? 0 : min_Length;
+
+}
+
+let array = [2,3,1,2,4,3];
+let target = 7;
+console.log(subArrayMin_Sliding_Window(array,target));
+
