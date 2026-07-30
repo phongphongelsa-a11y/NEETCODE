@@ -10,16 +10,16 @@ function is_Anagram(s: string, t: string) : boolean {
     * - Time: o(s+t)
     * - Space: o(n) 
  */
-    if (s.length!= t.length) return false;
-    let a = new Array(26).fill(0);
-    for (let i = 0;i<s.length;i++) {
-        let cs = s[i].charCodeAt(0) - 97;
-        a[cs] = a[cs] +1;
-        cs = t[i].charCodeAt(0) - 97;
-        a[cs] = a[cs] -1;        
+    if (s.length!=t.length) return false;
+    let count = new Array(26).fill(0);
+    for (let i =0; i<s.length;i++) {
+        let cs = s[i].charCodeAt(0) - 'a'.charCodeAt(0);
+        count[cs] = count[cs]+1;
+        cs = t[i].charCodeAt(0) - 'a'.charCodeAt(0);
+        count[cs] = count[cs]-1;
     }
-    for (let i = 0;i<a.length;i++) {
-        if (a[i]!=0) {
+    for (let i =0; i<count.length; i++) {
+        if (count[i]!=0) {
             return false;
         }
     }

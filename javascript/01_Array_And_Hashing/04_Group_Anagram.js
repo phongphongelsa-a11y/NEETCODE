@@ -1,3 +1,5 @@
+
+
 // Solution key: sort
 function group_Anagram(strs) {
     let result = new Map();
@@ -10,6 +12,8 @@ function group_Anagram(strs) {
     }
     return result;
 }
+
+
 // Solution 2 for
 function group_anagram_brute_force(strs) {
     let result = [];
@@ -27,7 +31,6 @@ function group_anagram_brute_force(strs) {
     } 
     return result;
 }
-
 function isAnagram(s,t) {
     let count = new Array(26).fill(0);
     for (let i = 0; i<s.length;i++) {
@@ -44,3 +47,27 @@ function isAnagram(s,t) {
     }
     return true;
 }
+
+
+function Hash_Map_count(strs) {
+    let count = new Map();
+
+    for (let s of strs) {
+        let countArray = new Array(26).fill(0);
+        for (let c of s) {
+            countArray[c.charCodeAt(0) - 'a'.charCodeAt(0)] += 1;
+        }
+
+        let key = countArray.join(',');
+        console.log(key);
+        if (!count.has(key)) {
+            count.set(key,[]);
+        }
+        count.get(key).push(s);
+    }
+    return Array.from(count.values());
+}
+
+
+let string = ["act","pots","tops","cat","stop","hat"];
+console.log(Hash_Map_count(string))

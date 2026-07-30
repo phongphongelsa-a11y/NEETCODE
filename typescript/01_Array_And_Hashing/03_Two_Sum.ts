@@ -34,10 +34,10 @@ function two_Sum_With_Data_Struct(arr:number[], target:number) {
     * - Space: o(n) 
  */
     const prevMap = new Map <number,number>();
-    for (let i =0;i<arr.length;i++) {
-        let diff:number = target - arr[i];
+    for (let i = 0;i<arr.length;i++) {
+        let diff = target - arr[i];
         if (prevMap.has(diff)) {
-            return [prevMap.get(diff),i];
+            return [prevMap.get(diff), i];
         }
         prevMap.set(arr[i],i);
     }
