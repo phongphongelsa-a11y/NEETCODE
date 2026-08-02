@@ -13,6 +13,9 @@ function ConTainer_Water_Brute_Force(heights:number[]) : number {
 }
 
 function ConTainer_Water_Two_Pointer(heights:number[]) : number {
+// diện tích = tích của đoạn trục x (tương ứng vs khoảng cách) 
+// và
+// đoạn trục y = min 2 cột chặn
     let max_Area = -Infinity;
         let i = 0;
         let j = heights.length - 1;

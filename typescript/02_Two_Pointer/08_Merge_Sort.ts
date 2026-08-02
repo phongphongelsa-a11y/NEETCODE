@@ -10,6 +10,7 @@ function merge(arr:number[], left:number, mid:number, right:number) : void {
     for (let j = 0; j<n2; j++) {
         R[j] = arr[mid + 1 + j];
     }
+    
     let i =0;
     let j =0;
     let k = left;
