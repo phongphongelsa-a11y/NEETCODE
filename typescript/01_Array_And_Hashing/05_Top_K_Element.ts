@@ -64,7 +64,7 @@ function HashMap_Top_K(arr:number[],k:number) {
             [4,2]
     *   ] 
     *   Sort a[1] với b[1];
-    *   Dùng hàm slice cắt array từ 0 - K. map(pair=> pair[0]) #tức là lấy phần tử [0] trong array#
+    *   Dùng hàm slice cắt array từ 0 - K. map(pair=> pair[0]) #tức là lấy phần tử [0] trong array
     * @Complexcity: 
     * - Time: o(n log n )
     * - Space: o(n) 
@@ -80,13 +80,13 @@ function HashMap_Top_K(arr:number[],k:number) {
 
 function HashMap_Bucket_Sort_Top_K(arr:number[],k:number) {
 /**
-    * @problem: [Top K Frequent Element | https://neetcode.io/problems/top-k-elements-in-list/question?list=neetcode150 ]
+    * @problem: [ Top K Frequent Element | https://neetcode.io/problems/top-k-elements-in-list/question?list=neetcode150 ]
     * @Solution: Bucket Sort
     * @Idea: 
     *   
     *  
     * @Complexcity: 
-    * - Time: o(n log n )
+    * - Time: o(n)
     * - Space: o(n) 
  */
     const count = new Map<number,number>();
@@ -98,17 +98,34 @@ function HashMap_Bucket_Sort_Top_K(arr:number[],k:number) {
     for (const n of arr) {
         count.set(n,(count.get(n)??0)+1);
     }
+
+
+    /*
+        1 -> 3
+        2 -> 4
+        3 -> 1 
+    */
+
+
     //bucket sort
     for (const [n,f] of count ) {
         freq[f].push(n);
     }
+    
+    /*
+        freq: 
+        [] [3] [4] [1]
+        0   1   2   3
+
+    */
+
     const result : number[] = [];
     for (let i = freq.length-1; i>0 ; i--) {
         for (const n of freq[i]) {
             result.push(n);
             if (result.length === k) {
                 return result;
-            }
+            }   
         }
     }
 }
